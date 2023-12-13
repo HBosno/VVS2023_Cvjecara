@@ -39,49 +39,61 @@ namespace Cvjecara
         #endregion
 
         #region Metode
-        /* Simulacija CodeStream komentara: 
-         * Metoda sadrži logiku za rad sa cvijećem ali nigdje nisu obrazložene moguće opcije (parametar opcija).
-         * Potrebno dodati komentar s objašnjenjem rada metode.
-        */
+        /// <summary>
+        /// Obavlja određene radnje s cvijetom, ovisno o zadanoj opciji.
+        /// </summary>
+        /// <param name="c">Cvijet s kojim se vrše određene radnje.</param>
+        /// <param name="opcija">
+        /// Opcija koja određuje vrstu radnje:
+        ///  - 0: Dodavanje cvijeta.
+        ///  - 1: Izmjena postojećeg cvijeta.
+        ///  - 2: Brisanje postojećeg cvijeta.
+        /// </param>
         public void RadSaCvijećem(Cvijet c, int opcija)
         {
             if (opcija == 0)
             {
-                /* Simulacija CodeStream komentara:
-                 * Odvojiti logiku validaciju u zasebnu metodu, smanjiti dupliranje koda i poboljšati čitljivost.
-                */
-                if (c == null)
-                    throw new NullReferenceException("Nemoguće dodati cvijet koji ne postoji!");
-                else if (cvijeće.Contains(c))
-                    throw new InvalidOperationException("Nemoguće dodati cvijet koji već postoji!");
-                else
-                    cvijeće.Add(c);
+                RadSaCvijećemValidacija(c, opcija);
+                cvijeće.Add(c);
             }
             else if (opcija == 1)
             {
-                if (c == null)
-                    throw new NullReferenceException("Nemoguće izmijeniti cvijet koji ne postoji!");
-                else if (cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme) == null)
-                    throw new InvalidOperationException("Nemoguće izmijeniti cvijet koji ne postoji!");
-                else
-                {
-                    cvijeće.Remove(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme));
-                    cvijeće.Add(c);
-                }
+                RadSaCvijećemValidacija(c, opcija);
+                cvijeće.Remove(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme));
+                cvijeće.Add(c);
             }
             else if (opcija == 2)
             {
-                if (c == null)
-                    throw new NullReferenceException("Nemoguće obrisati cvijet koji ne postoji!");
-                else if (cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme) == null)
-                    throw new InvalidOperationException("Nemoguće obrisati cvijet koji ne postoji!");
-                else
-                {
-                    cvijeće.Remove(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme));
-                }
+                RadSaCvijećemValidacija(c, opcija);
+                cvijeće.Remove(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme));  
             }
             else
                 throw new InvalidOperationException("Unijeli ste nepoznatu opciju!");
+        }
+
+        public void RadSaCvijećemValidacija(Cvijet c, int opcija)
+        {
+            if (c == null)
+            {
+                switch (opcija)
+                {
+                    case 0: throw new NullReferenceException("Nemoguće dodati cvijet koji ne postoji!");
+                    case 1: throw new NullReferenceException("Nemoguće izmijeniti cvijet koji ne postoji!");
+                    case 2: throw new NullReferenceException("Nemoguće obrisati cvijet koji ne postoji!");
+                }
+            }
+            if (opcija == 0 && cvijeće.Contains(c))
+            {
+                throw new InvalidOperationException("Nemoguće dodati cvijet koji već postoji!");
+            }
+            if(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme) == null && (opcija == 1 || opcija == 2))
+            {
+                switch (opcija)
+                {
+                    case 1: throw new InvalidOperationException("Nemoguće izmijeniti cvijet koji ne postoji!");
+                    case 2: throw new InvalidOperationException("Nemoguće obrisati cvijet koji ne postoji!");
+                }
+            }
         }
 
         public void DodajBuket(List<Cvijet> cvijeće, List<string> dodaci, Poklon poklon, double cijena)
@@ -104,9 +116,12 @@ namespace Cvjecara
         {
             return buketi;
         }
-        /* Simulacija CodeStream komentara:
-             * Poželjno objašnjenje rada metode.
-        */
+
+        /// <summary>
+        /// Izvršava nabavku cvijeća ovisno o godišnjem dobu i veličini narudžbe.
+        /// </summary>
+        /// <param name="godišnjeDoba">Godišnje doba u kojem se vrši nabavka (Proljeće, Jesen).</param>
+        /// <param name="veličinaNarudžbe">Veličina narudžbe (Mala, Velika).</param>
         public void IzvršiNabavku(string godišnjeDoba, string veličinaNarudžbe)
         {
             if (godišnjeDoba.Equals("Ljeto") || godišnjeDoba.Equals("Zima"))
@@ -117,6 +132,10 @@ namespace Cvjecara
              * U naredna dva if-a se podrazumijeva godišnje doba "Proljeće" ili "Jesen", a nigdje nije urađena validacija.
              * Također potrebna validacija za nesmislen parametar velicinaNarudzbe.
              */
+            if (!(godišnjeDoba.Equals("Proljeće") || godišnjeDoba.Equals("Jesen")))
+                throw new ArgumentException("Nabavka je dozvoljena samo u proljeće ili jesen.");
+            if (!(veličinaNarudžbe.Equals("Mala") || veličinaNarudžbe.Equals("Velika")))
+                throw new ArgumentException("Nesmislen parametar za veličinu narudžbe.");
             if (veličinaNarudžbe.Equals("Mala"))
             {
                 Cvijet neven = new Cvijet(Vrsta.Neven, "Calendula officinalis", "Žuta", DateTime.Now.AddDays(-1), 10);
@@ -137,9 +156,15 @@ namespace Cvjecara
                 RadSaCvijećem(ruza, 0);
             }
         }
-        /* Simulacija CodeStream komentara:
-             * Poželjno objašnjenje rada metode.
-        */
+
+        /// <summary>
+        /// Pregledava sve cvjetove u kolekciji i provodi određene akcije za svaki cvijet.
+        /// </summary>
+        /// <remarks>
+        /// Za svaki cvijet u kolekciji:
+        /// - Poziva metodu <see cref="Cvijet.ProvjeriKrajSezone"/> kako bi se provjerilo je li došao kraj sezone za taj cvijet.
+        /// - Provjerava svježinu cvijeća pomoću metode <see cref="Cvijet.OdrediSvježinuCvijeća"/> i postavlja količinu na 0 ako je svježina manja od 2.
+        /// </remarks>
         public void PregledajCvijeće()
         {
             foreach (Cvijet cvijet in cvijeće)
@@ -196,10 +221,6 @@ namespace Cvjecara
         /// </summary>
         /// <returns></returns>
         /// 
-        /*
-          * Simulacija CodeStream komentara:
-          * Potreban manji refaktoring metode. Ukloniti dupliranje koda, koristiti gotove metode za nalaženje maksimuma i slično.
-        */
         public Mušterija DajNajboljuMušteriju()
         {
             //Ovu metodu je implementirao Dzenan Nuhic
@@ -207,63 +228,33 @@ namespace Cvjecara
             {
                 throw new ArgumentException("Cvjecara nema nijednu musteriju"); 
             }
-            int maxCvijeca = -1;
-            //trazenje musterije koji je kupio najvise cvijeca
-            mušterije.ForEach(musterija => 
-                {
-                    int brojCvijeca = 0;
-                    musterija.KupljeniBuketi.ForEach(buket => brojCvijeca += buket.Cvijeće.Count);
-                    if (brojCvijeca > maxCvijeca)
-                        maxCvijeca = brojCvijeca;
-                }
-            );
-            List<Mušterija> najboljeMusterije = new List<Mušterija>();
-            //provjera da li ima musterija koji su kupili isti broj cvijeca ko najbolji, te ako ima dodati ih u listu
-            najboljeMusterije.AddRange(mušterije.FindAll(musterija =>
+            List<int> brojCvijecaPoMusteriji = mušterije.Select(musterija =>
             {
                 int brojCvijeca = 0;
                 musterija.KupljeniBuketi.ForEach(buket => brojCvijeca += buket.Cvijeće.Count);
-                /*
-                 * Simulacija CodeStream komentara:
-                 * Ovo je drugi put da se računaju isti podaci - suma kupljenog cvijeca svakog buketa za svakog od mušterije.
-                */
-                if (brojCvijeca == maxCvijeca)
-                    return true;
-                return false;
-            }));
-            double maxNovca = -1;
+                return brojCvijeca;
+            }).ToList();
+            int maxBrojCvijeca = brojCvijecaPoMusteriji.Max();
+            List<Mušterija> najboljeMusterije = mušterije
+                .Where((musterija, index) => brojCvijecaPoMusteriji[index] == maxBrojCvijeca).ToList();
+            
             //ako ima vise najboljih gleda se broj para koji su najbolji potrosili
             if(najboljeMusterije.Count > 1)
             {
-                
-                Mušterija najbolji = null;
-                najboljeMusterije.ForEach(m =>
+                List<double> brojNovcaList = najboljeMusterije.Select(m =>
                 {
                     double brojNovca = 0;
                     m.KupljeniBuketi.ForEach(buket => brojNovca += buket.Cijena);
-                    if(brojNovca > maxNovca)
-                    {
-                        najbolji = m;
-                        maxNovca = brojNovca;
-                    }
-                });
+                    return brojNovca;
+                }).ToList();
+                double maxNovca = brojNovcaList.Max();
+                List<Mušterija> sveMusterijeSaMaxSumom = najboljeMusterije
+                    .Where((musterija, index) => brojNovcaList[index] == maxNovca).ToList();
                 //da li ima vise njih koji su potrosili isti iznos novca
-                List<Mušterija> temp = najboljeMusterije.FindAll(m =>
-                {
-                    double brojNovca = 0;
-                    m.KupljeniBuketi.ForEach(buket => brojNovca += buket.Cijena);
-                    /*
-                     * Simulacija CodeStream komentara:
-                     * Ovo je drugi put da se računaju isti podaci - suma potrošenog novca za svakog od mušterije.
-                    */
-                    if (brojNovca == maxNovca)
-                        return true;
-                    return false;
-                });
                 //ako ima baci izuzetak
-                if (temp.Count > 1)
+                if (sveMusterijeSaMaxSumom.Count > 1)
                     throw new ArgumentException("Najbolja musterija se ne moze tacno odrediti.");
-                return najbolji;
+                return sveMusterijeSaMaxSumom[0];
             }
             return najboljeMusterije[0];
         }
