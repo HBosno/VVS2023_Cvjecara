@@ -39,11 +39,17 @@ namespace Cvjecara
         #endregion
 
         #region Metode
-
+        /* Simulacija CodeStream komentara: 
+         * Metoda sadrži logiku za rad sa cvijećem ali nigdje nisu obrazložene moguće opcije (parametar opcija).
+         * Potrebno dodati komentar s objašnjenjem rada metode.
+        */
         public void RadSaCvijećem(Cvijet c, int opcija)
         {
             if (opcija == 0)
             {
+                /* Simulacija CodeStream komentara:
+                 * Odvojiti logiku validaciju u zasebnu metodu, smanjiti dupliranje koda i poboljšati čitljivost.
+                */
                 if (c == null)
                     throw new NullReferenceException("Nemoguće dodati cvijet koji ne postoji!");
                 else if (cvijeće.Contains(c))
@@ -98,13 +104,19 @@ namespace Cvjecara
         {
             return buketi;
         }
-
+        /* Simulacija CodeStream komentara:
+             * Poželjno objašnjenje rada metode.
+        */
         public void IzvršiNabavku(string godišnjeDoba, string veličinaNarudžbe)
         {
             if (godišnjeDoba.Equals("Ljeto") || godišnjeDoba.Equals("Zima"))
                 throw new ArgumentException("Nabavka nije dozvoljena ljeti ili zimi.");
             if (veličinaNarudžbe.Equals("Srednja"))
                 throw new ArgumentException("Nije dozvoljena nabavka srednje velicine.");
+            /* Simulacija CodeStream komentara:
+             * U naredna dva if-a se podrazumijeva godišnje doba "Proljeće" ili "Jesen", a nigdje nije urađena validacija.
+             * Također potrebna validacija za nesmislen parametar velicinaNarudzbe.
+             */
             if (veličinaNarudžbe.Equals("Mala"))
             {
                 Cvijet neven = new Cvijet(Vrsta.Neven, "Calendula officinalis", "Žuta", DateTime.Now.AddDays(-1), 10);
@@ -125,7 +137,9 @@ namespace Cvjecara
                 RadSaCvijećem(ruza, 0);
             }
         }
-
+        /* Simulacija CodeStream komentara:
+             * Poželjno objašnjenje rada metode.
+        */
         public void PregledajCvijeće()
         {
             foreach (Cvijet cvijet in cvijeće)
@@ -182,6 +196,10 @@ namespace Cvjecara
         /// </summary>
         /// <returns></returns>
         /// 
+        /*
+          * Simulacija CodeStream komentara:
+          * Potreban manji refaktoring metode. Ukloniti dupliranje koda, koristiti gotove metode za nalaženje maksimuma i slično.
+        */
         public Mušterija DajNajboljuMušteriju()
         {
             //Ovu metodu je implementirao Dzenan Nuhic
@@ -205,6 +223,10 @@ namespace Cvjecara
             {
                 int brojCvijeca = 0;
                 musterija.KupljeniBuketi.ForEach(buket => brojCvijeca += buket.Cvijeće.Count);
+                /*
+                 * Simulacija CodeStream komentara:
+                 * Ovo je drugi put da se računaju isti podaci - suma kupljenog cvijeca svakog buketa za svakog od mušterije.
+                */
                 if (brojCvijeca == maxCvijeca)
                     return true;
                 return false;
@@ -230,6 +252,10 @@ namespace Cvjecara
                 {
                     double brojNovca = 0;
                     m.KupljeniBuketi.ForEach(buket => brojNovca += buket.Cijena);
+                    /*
+                     * Simulacija CodeStream komentara:
+                     * Ovo je drugi put da se računaju isti podaci - suma potrošenog novca za svakog od mušterije.
+                    */
                     if (brojNovca == maxNovca)
                         return true;
                     return false;
