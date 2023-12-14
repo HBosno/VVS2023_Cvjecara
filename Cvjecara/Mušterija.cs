@@ -65,22 +65,8 @@ namespace Cvjecara
             kupljeniPokloni.Add(p);
         }
 
-        /// <summary>
-        /// Metoda koja dodjeljuje nagradni poklon mušteriji.
-        /// Ukoliko je mušterija napravila broj kupovina koji predstavlja stepen broja 10
-        /// (minimalno 100, a zatim 1,000, 10,000, 100,000 i sl.)
-        /// dodaje mu se nagradni poklon koji je poslan kao parametar,
-        /// ali samo pod uslovom da poklon ispunjava kriterij da njegov postotak popusta
-        /// odgovara broju kupovina (za 100 kupovina maksimalni popust je 10%, za 1,000
-        /// kupovina maksimalni popust je 20%, za 10,000 kupovina je 30% i sl.)
-        /// Ukoliko mušterija nije napravila tačan broj kupovina koji se zahtijeva
-        /// ili je proslijeđen poklon koji ne ispunjava parametar, potrebno je baciti izuzetak.
-        /// </summary>
-        /// <param name="nagrada"></param>
-        /// <returns></returns>
         public bool NagradnaKupovina(Poklon nagrada)
         {
-            // Ovu metodu je implementirao Muhamed Borovac
             double vrijednost = Math.Log10(UkupanBrojKupovina);
 
             if (vrijednost == (int) vrijednost)
@@ -100,6 +86,39 @@ namespace Cvjecara
             throw new ArgumentException("Mušterija nije napravila tačan broj kupovina koji se zahtijeva.");
         }
 
+        public string NajčešćiCvijet()
+        {
+            if (kupljeniBuketi.Count == 0)
+            {
+                return "Mušterija nije kupila nijedan buket.";
+            }
+
+            Dictionary<Vrsta, int> brojPojavljivanja = new Dictionary<Vrsta, int>();
+
+            foreach (var buket in kupljeniBuketi)
+            {
+                foreach (var cvijet in buket.Cvijeće)
+                {
+                    Vsrta vrstaCvijeta = cvijet.Vrsta;
+                    if (brojPojavljivanja.ContainsKey(vrstaCvijeta))
+                    {
+                        brojPojavljivanja[vrstaCvijeta]++;
+                    }
+                    else
+                    {
+                        brojPojavljivanja[vrstaCvijeta] = 1;
+                    }
+                }
+            }
+
+            if (brojPojavljivanja.Count == 0)
+            {
+                return "Mušterija nije kupila nijedan cvijet u buketima.";
+            }
+
+            var najcesciCvijet = brojPojavljivanja.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
+            return najcesciCvijet;
+        }
         #endregion
     }
 }
