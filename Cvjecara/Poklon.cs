@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;  //Biblioteka nije potrebna.
-using System.Linq;                 //Biblioteka nije potrebna.
-using System.Text;                 //Biblioteka nije potrebna.
-using System.Threading.Tasks;      //Biblioteka nije potrebna.
+﻿using System;   //Ostala je samo potrebna biblioteka, ostale su obrisane.
 
 namespace Cvjecara
 {
@@ -10,45 +6,31 @@ namespace Cvjecara
     {
         #region Atributi
 
-        string šifra, opis;  //"Greška": Korištenje dijakritičkih znakova, umjesto standardnih slova.
+        string sifra, opis;  //"Ispravljena greška": Ime varijable je promijenjeno iz "brojač" u "brojac".
         double postotakPopusta;
-        int brojač = 10000;  //"Greška": Korištenje dijakritičkih znakova, umjesto standardnih slova.
-        int osoba;   //Nepotreban atribut
+        int brojac = 10000;  //"Ispravljena greška": Ime varijable je promijenjeno iz "brojač" u "brojac".
+
 
         #endregion
 
         #region Properties
 
-        public string Šifra { get => šifra; }     //"Greška": Korištenje dijakritičkih znakova, umjesto standardnih slova.
+        public string Šifra { get => sifra; }     //"Ispravljena greška": Ime varijable je promijenjeno iz "brojač" u "brojac".
         public string Opis { get => opis; set => opis = value; }
         public double PostotakPopusta { get => postotakPopusta; }
 
-        public double Osoba { get => osoba; }  //Nepotrebno svojstvo, jer je i varijabla "osoba" nepotrebna.
-        #endregion
-
-        #region 
-        //Nepotrebna metoda
-        public void KolikoPoklona() {       //"Greška": Metoda ne radi ništa i nije potrebna.
-        //Ne radi ništa
-                }
-
-        // Nepotrebna metoda
-        public void BojaPoklona()           //"Greška": Metoda ne radi ništa i nije potrebna. 
-        {
-            //Ne radi ništa
-        }
         #endregion
 
         #region Konstruktor
 
         public Poklon(string opis, double postotak)
         {
-            šifra = brojač.ToString();   //"Greška": Korištenje dijakritičkih znakova, umjesto standardnih slova.
-            br++;                       //"Greška": Korištenje nepostojeće varijable.
+            sifra = brojac.ToString();   //"Ispravljena greška": Ime varijable je promijenjeno iz "brojač" u "brojac".
+            brojac++;                       //"Ispravljena greška": Koristi se deklarisana varijabla "brojac".
             Opis = opis;
             if (postotak < 0.1)
                 throw new InvalidOperationException("Nemoguće dodati postotak manji od 0.1!");
-            postotakPopusta = postotakPopusta;        //"Greška": Varijabli "postotakPopusta" se dodijeljuje vrijednost pogrešne varijable.
+            postotakPopusta = postotak;        //"Ispravljena greška": Varijabli "postotakPopusta" se dodijeljuje vrijednost "postotak".
         }
 
         #endregion
