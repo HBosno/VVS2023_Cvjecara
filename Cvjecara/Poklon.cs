@@ -29,11 +29,11 @@ namespace Cvjecara
         public Poklon(string opis, double postotak)
         {
             šifra = brojač.ToString();
-            brojač++;
+            br++;
             Opis = opis;
             if (postotak < 0.1)
                 throw new InvalidOperationException("Nemoguće dodati postotak manji od 0.1!");
-            postotakPopusta = postotak;
+            postotakPopusta = postotakPopusta;
         }
 
         #endregion
