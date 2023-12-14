@@ -26,6 +26,8 @@ namespace Cvjecara
             get => latinskoIme; 
             set
             {
+            ///Komentar: Razmotriti dodavanje dodatne provjere latinskoIme == null kako bi bilo jasnije.
+           
                 if (latinskoIme != null)
                     throw new FormatException("Nemoguće promijeniti latinsko ime cvijeta!");
 
@@ -44,7 +46,8 @@ namespace Cvjecara
 
                 if (!boje.Contains(value))
                     throw new FormatException("Unijeli ste nepostojeću boju!");
-
+                /// Komentar: Mozda bi bilo bolje razdvajanje ove logike u zasebnu
+                /// metodu kako bi se smanjila slozenost set metode.
                 bool bojeLjiljana = value == "Žuta" || value == "Bijela" || value == "Crvena",
                     bojeNevena = value == "Žuta",
                     bojeMargarete = value == "Žuta" || value == "Bijela",
@@ -62,6 +65,8 @@ namespace Cvjecara
             get => datumBranja;
             set
             {
+                ///Greska: Pogresna implementacija provjere datuma. Trenutna implementacija dopusta
+                ///datume u buducnosti, sto nije ispravno.
                 if (value < DateTime.Now)
                     throw new FormatException("Datum branja ne može biti u budućnosti!");
                 datumBranja = value;
@@ -89,8 +94,12 @@ namespace Cvjecara
             LatinskoIme = ime;
             Boja = boja;
             DatumBranja = datumBranja;
+            ///Komentar: Dodavanje Enuma za vrste cvijeca, mozda zamijeniti string sa Enum-om za vrste
+            ///cvijeca radi poboljsane citljivosti i sigurnosti koda.
             List<string> sezonskeVrste = new List<string>()
             { "Neven", "Margareta", "Ljiljan" };
+            ///Greska: Postavka Sezonsko u konstruktoru nije ispravna, sto dovodi do pogresnih rezultata.
+            ///Sezonsko bi trebalo biti postavljeno na ispravnu vrijednost prema vrsti cvijeta.
             Sezonsko = true;
             Kolicina = kol;
         }
@@ -157,6 +166,7 @@ namespace Cvjecara
             double svjezina = 5;
             for(int i = 1; i <= dani-3; i++)
             {
+                ///Greska: Pogresna aritmetika - treba oduzimanje umjesto dodavanja
                 svjezina += koeficijent;
                 koeficijent *= 2;
             }
