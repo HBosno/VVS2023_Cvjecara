@@ -67,7 +67,8 @@ namespace Cvjecara
             {
                 ///Greska: Pogresna implementacija provjere datuma. Trenutna implementacija dopusta
                 ///datume u buducnosti, sto nije ispravno.
-                if (value < DateTime.Now)
+                ///Ispravljena greska: Znak promijenjen u vece, implementacija ne dopusta datume u buducnosti
+                if (value > DateTime.Now)
                     throw new FormatException("Datum branja ne može biti u budućnosti!");
                 datumBranja = value;
             }
@@ -100,7 +101,8 @@ namespace Cvjecara
             { "Neven", "Margareta", "Ljiljan" };
             ///Greska: Postavka Sezonsko u konstruktoru nije ispravna, sto dovodi do pogresnih rezultata.
             ///Sezonsko bi trebalo biti postavljeno na ispravnu vrijednost prema vrsti cvijeta.
-            Sezonsko = true;
+            ///Ispravljena greska: Sezonsko postavljeno na ispravnu vrijednost prema vrsti cvijeta.
+            Sezonsko = sezonskeVrste.Contains(vrsta.ToString());
             Kolicina = kol;
         }
 
@@ -167,7 +169,8 @@ namespace Cvjecara
             for(int i = 1; i <= dani-3; i++)
             {
                 ///Greska: Pogresna aritmetika - treba oduzimanje umjesto dodavanja
-                svjezina += koeficijent;
+                ///Ispravljena greska: oduzimanje umjesto dodavanja
+                svjezina -= koeficijent;
                 koeficijent *= 2;
             }
 
