@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj": {}
+    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj": {
+    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj",
+        "projectUniqueName": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
         "projectName": "Cvjecara",
-        "projectPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj",
-        "packagesPath": "C:\\Users\\hamza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\obj\\",
+        "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
+        "packagesPath": "C:\\Users\\Dino-PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dino-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,12 +56,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

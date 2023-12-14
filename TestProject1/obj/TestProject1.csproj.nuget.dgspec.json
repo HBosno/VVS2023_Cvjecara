@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\TestProject1\\TestProject1.csproj": {}
+    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj": {
+    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj",
+        "projectUniqueName": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
         "projectName": "Cvjecara",
-        "projectPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj",
-        "packagesPath": "C:\\Users\\hamza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\obj\\",
+        "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
+        "packagesPath": "C:\\Users\\Dino-PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dino-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,26 +56,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\TestProject1\\TestProject1.csproj": {
+    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\TestProject1\\TestProject1.csproj",
-        "packagesPath": "C:\\Users\\hamza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\TestProject1\\obj\\",
+        "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
+        "packagesPath": "C:\\Users\\Dino-PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dino-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +103,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj": {
-                "projectPath": "C:\\Users\\hamza\\Desktop\\V semestar\\VVS\\Projekat\\Cvjecara\\Cvjecara\\Cvjecara.csproj"
+              "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
+                "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj"
               }
             }
           }
@@ -133,12 +147,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
