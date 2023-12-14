@@ -65,6 +65,9 @@ namespace Cvjecara
             kupljeniPokloni.Add(p);
         }
 
+        /* Simulacija CodeStream komentara:
+         * Zbog kompleksnosti metode poželjno je dodati objašnjenje rada metode
+        */
         public bool NagradnaKupovina(Poklon nagrada)
         {
             double vrijednost = Math.Log10(UkupanBrojKupovina);
@@ -77,6 +80,9 @@ namespace Cvjecara
                     KupljeniPokloni.Add(nagrada);
                     return true;
                 }
+                /* Simulacija CodeStream komentara:
+                 * Bespotreban else uslov
+                */
                 else
                 {
                     throw new ArgumentException("Proslijeđeni poklon ne ispunjava parametar");
@@ -86,6 +92,10 @@ namespace Cvjecara
             throw new ArgumentException("Mušterija nije napravila tačan broj kupovina koji se zahtijeva.");
         }
 
+        /* Simulacija CodeStream komentara:
+         * Zbog kompleksnosti metode poželjno je dodati objašnjenje rada metode
+         * Potrebno uraditi validaciju metoda
+        */
         public Vrsta NajčešćiCvijet()
         {
             Dictionary<Vrsta, int> brojPojavljivanja = new Dictionary<Vrsta, int>();
@@ -99,7 +109,10 @@ namespace Cvjecara
                     {
                         brojPojavljivanja[vrstaCvijeta]++;
                     }
-
+                    /* Simulacija CodeStream komentara:
+                     * Kroz svaku petlju se varijabla brojPonavljanja[vrstaCvijeta] postavlja na 1,
+                     * potrebno staviti pod else uvjetom
+                    */
                     brojPojavljivanja[vrstaCvijeta] = 1;
 
                 }
