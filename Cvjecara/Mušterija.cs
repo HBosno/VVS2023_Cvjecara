@@ -65,9 +65,19 @@ namespace Cvjecara
             kupljeniPokloni.Add(p);
         }
 
-        /* Simulacija CodeStream komentara:
-         * Zbog kompleksnosti metode poželjno je dodati objašnjenje rada metode
-        */
+        /// <summary>
+        /// Metoda koja dodjeljuje nagradni poklon mušteriji.
+        /// Ukoliko je mušterija napravila broj kupovina koji predstavlja stepen broja 10
+        /// (minimalno 100, a zatim 1,000, 10,000, 100,000 i sl.)
+        /// dodaje mu se nagradni poklon koji je poslan kao parametar,
+        /// ali samo pod uslovom da poklon ispunjava kriterij da njegov postotak popusta
+        /// odgovara broju kupovina (za 100 kupovina maksimalni popust je 10%, za 1,000
+        /// kupovina maksimalni popust je 20%, za 10,000 kupovina je 30% i sl.)
+        /// Ukoliko mušterija nije napravila tačan broj kupovina koji se zahtijeva
+        /// ili je proslijeđen poklon koji ne ispunjava parametar, potrebno je baciti izuzetak.
+        /// </summary>
+        /// <param name="nagrada"></param>
+        /// <returns></returns>
         public bool NagradnaKupovina(Poklon nagrada)
         {
             double vrijednost = Math.Log10(UkupanBrojKupovina);
@@ -80,24 +90,24 @@ namespace Cvjecara
                     KupljeniPokloni.Add(nagrada);
                     return true;
                 }
-                /* Simulacija CodeStream komentara:
-                 * Bespotreban else uslov
-                */
-                else
-                {
                     throw new ArgumentException("Proslijeđeni poklon ne ispunjava parametar");
-                }
             }
 
             throw new ArgumentException("Mušterija nije napravila tačan broj kupovina koji se zahtijeva.");
         }
 
-        /* Simulacija CodeStream komentara:
-         * Zbog kompleksnosti metode poželjno je dodati objašnjenje rada metode
-         * Potrebno uraditi validaciju varijabli
-        */
+        /// <summary>
+        /// Metoda koja vraća vrstu cvijeta koja se najčešće pojavljuje u svim buketima
+        /// koja je određena mušterija kupila
+        /// </summary>
+        /// <returns>Vrsta cvijeta koja se najčešće pojavljuje</returns>
         public Vrsta NajčešćiCvijet()
         {
+            if (kupljeniBuketi.Count == 0)
+            {
+                throw new InvalidOperationException("Mušterija nije kupila nijedan buket.");
+            }
+
             Dictionary<Vrsta, int> brojPojavljivanja = new Dictionary<Vrsta, int>();
 
             foreach (var buket in kupljeniBuketi)
@@ -109,13 +119,16 @@ namespace Cvjecara
                     {
                         brojPojavljivanja[vrstaCvijeta]++;
                     }
-                    /* Simulacija CodeStream komentara:
-                     * Kroz svaku petlju se varijabla brojPonavljanja[vrstaCvijeta] postavlja na 1,
-                     * potrebno staviti pod else uvjetom
-                    */
-                    brojPojavljivanja[vrstaCvijeta] = 1;
-
+                    else
+                    {
+                        brojPojavljivanja[vrstaCvijeta] = 1; //Dodan else uvijet
+                    }
                 }
+            }
+
+            if (brojPojavljivanja.Count == 0)
+            {
+                throw new InvalidOperationException("Mušterija nije kupila nijedan cvijet u buketima.");
             }
 
             var najcesciCvijet = brojPojavljivanja.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
