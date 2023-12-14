@@ -62,7 +62,7 @@ namespace Cvjecara
             get => datumBranja;
             set
             {
-                if (value > DateTime.Now)
+                if (value < DateTime.Now)
                     throw new FormatException("Datum branja ne može biti u budućnosti!");
                 datumBranja = value;
             }
@@ -91,7 +91,7 @@ namespace Cvjecara
             DatumBranja = datumBranja;
             List<string> sezonskeVrste = new List<string>()
             { "Neven", "Margareta", "Ljiljan" };
-            Sezonsko = sezonskeVrste.Contains(vrsta.ToString());
+            Sezonsko = true;
             Kolicina = kol;
         }
 
@@ -125,7 +125,7 @@ namespace Cvjecara
         /// <returns></returns>
         public double OdrediSvježinuCvijeća()
         {
-            ///Ovu metodu je implementirao Eldar Civgin
+           
             TimeSpan ubrano = TimeSpan.FromDays((DateTime.Now - datumBranja).TotalDays);
             double dani = ubrano.TotalDays;
 
@@ -157,7 +157,7 @@ namespace Cvjecara
             double svjezina = 5;
             for(int i = 1; i <= dani-3; i++)
             {
-                svjezina -= koeficijent;
+                svjezina += koeficijent;
                 koeficijent *= 2;
             }
 

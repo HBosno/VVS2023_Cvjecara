@@ -2359,19 +2359,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\TestProject1\\TestProject1.csproj",
       "projectName": "TestProject1",
-      "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
-      "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\obj\\",
+      "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\TestProject1\\TestProject1.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\TestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2385,8 +2385,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
-              "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj"
+            "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\Cvjecara\\Cvjecara.csproj": {
+              "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\Cvjecara\\Cvjecara.csproj"
             }
           }
         }
@@ -2429,20 +2429,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
