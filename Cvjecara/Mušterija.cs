@@ -20,8 +20,8 @@ namespace Cvjecara
         #region Properties
 
         public string IdentifikacijskiBroj { get => identifikacijskiBroj; }
-        public string ImeIPrezime 
-        { 
+        public string ImeIPrezime
+        {
             get => imeIPrezime;
             set
             {
@@ -69,7 +69,7 @@ namespace Cvjecara
         {
             double vrijednost = Math.Log10(UkupanBrojKupovina);
 
-            if (vrijednost == (int) vrijednost)
+            if (vrijednost == (int)vrijednost)
             {
                 // Math.Log10 će vratiti 1 za 10 kupovina, 2 za 100, 3 za 1000 itd. što koristimo za računanje postotka popusta
                 if (nagrada.PostotakPopusta == (vrijednost - 1) / (double)10)
@@ -82,38 +82,27 @@ namespace Cvjecara
                     throw new ArgumentException("Proslijeđeni poklon ne ispunjava parametar");
                 }
             }
-            
+
             throw new ArgumentException("Mušterija nije napravila tačan broj kupovina koji se zahtijeva.");
         }
 
-        public string NajčešćiCvijet()
+        public Vrsta NajčešćiCvijet()
         {
-            if (kupljeniBuketi.Count == 0)
-            {
-                return "Mušterija nije kupila nijedan buket.";
-            }
-
             Dictionary<Vrsta, int> brojPojavljivanja = new Dictionary<Vrsta, int>();
 
             foreach (var buket in kupljeniBuketi)
             {
                 foreach (var cvijet in buket.Cvijeće)
                 {
-                    Vsrta vrstaCvijeta = cvijet.Vrsta;
+                    Vrsta vrstaCvijeta = cvijet.Vrsta;
                     if (brojPojavljivanja.ContainsKey(vrstaCvijeta))
                     {
                         brojPojavljivanja[vrstaCvijeta]++;
                     }
-                    else
-                    {
-                        brojPojavljivanja[vrstaCvijeta] = 1;
-                    }
-                }
-            }
 
-            if (brojPojavljivanja.Count == 0)
-            {
-                return "Mušterija nije kupila nijedan cvijet u buketima.";
+                    brojPojavljivanja[vrstaCvijeta] = 1;
+
+                }
             }
 
             var najcesciCvijet = brojPojavljivanja.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;

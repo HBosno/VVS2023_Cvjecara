@@ -49,19 +49,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\maida\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\Cvjecara\\Cvjecara.csproj",
+      "projectUniqueName": "C:\\Users\\maida\\Source\\Repos\\HBosno\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
       "projectName": "Cvjecara",
-      "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\Cvjecara\\Cvjecara.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara\\Cvjecara\\obj\\",
+      "projectPath": "C:\\Users\\maida\\Source\\Repos\\HBosno\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
+      "packagesPath": "C:\\Users\\maida\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maida\\Source\\Repos\\HBosno\\VVS2023_Cvjecara\\Cvjecara\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maida\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -108,7 +108,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
