@@ -13,6 +13,7 @@ namespace Cvjecara
         string šifra, opis;
         double postotakPopusta;
         int brojač = 10000;
+        int osoba;
 
         #endregion
 
@@ -22,6 +23,13 @@ namespace Cvjecara
         public string Opis { get => opis; set => opis = value; }
         public double PostotakPopusta { get => postotakPopusta; }
 
+        public double Osoba { get => osoba; }
+        #endregion
+
+        #region 
+        public void KolikoPoklona() {  }
+
+        public void BojaPoklona() {  }
         #endregion
 
         #region Konstruktor
