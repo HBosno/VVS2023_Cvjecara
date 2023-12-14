@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj": {}
+    "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
+    "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
         "projectName": "Cvjecara",
-        "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
-        "packagesPath": "C:\\Users\\Dino-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dino-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,21 +75,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj": {
+    "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
-        "packagesPath": "C:\\Users\\Dino-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\TestProject1.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dino-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +103,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
-                "projectPath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj"
+              "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj": {
+                "projectPath": "C:\\Users\\Korisnik\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj"
               }
             }
           }
@@ -166,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
