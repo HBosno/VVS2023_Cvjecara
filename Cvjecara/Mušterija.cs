@@ -94,7 +94,7 @@ namespace Cvjecara
 
         /* Simulacija CodeStream komentara:
          * Zbog kompleksnosti metode poželjno je dodati objašnjenje rada metode
-         * Potrebno uraditi validaciju metoda
+         * Potrebno uraditi validaciju varijabli
         */
         public Vrsta NajčešćiCvijet()
         {
