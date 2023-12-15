@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "80OnqNayym1+dPsgQI/Udz3IgZJDVfPeH4JRU7F4T8/CRbNw4Ok080HujjRxlB8ZiOy8OsKsZSfjGe0LT9WyUQ==",
+  "dgSpecHash": "l9FMnQ+XpdWiHyGlk8bw2PpZLgupTB2VqP6X/UzZ26WWYJEFpwgcrxj3Scg+CMeiRcIHVZRFXYcf2rIhpQun0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maida\\Source\\Repos\\HBosno\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
+  "projectFilePath": "C:\\Users\\Dino-PC\\Source\\Repos\\VVS2023_Cvjecara\\Cvjecara\\Cvjecara.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\maida\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+    "C:\\Users\\Dino-PC\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\Dino-PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Dino-PC\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Dino-PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
