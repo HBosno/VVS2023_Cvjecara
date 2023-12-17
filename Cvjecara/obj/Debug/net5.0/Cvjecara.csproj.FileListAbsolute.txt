@@ -34,3 +34,16 @@ C:\Users\Korisnik\source\repos\VVS2023_Cvjecara\VVS-Projekat\Cvjecara\obj\Debug\
 C:\Users\Korisnik\source\repos\VVS2023_Cvjecara\VVS-Projekat\Cvjecara\obj\Debug\net5.0\refint\Cvjecara.dll
 C:\Users\Korisnik\source\repos\VVS2023_Cvjecara\VVS-Projekat\Cvjecara\obj\Debug\net5.0\Cvjecara.pdb
 C:\Users\Korisnik\source\repos\VVS2023_Cvjecara\VVS-Projekat\Cvjecara\obj\Debug\net5.0\ref\Cvjecara.dll
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\bin\Debug\net5.0\Cvjecara.deps.json
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\bin\Debug\net5.0\Cvjecara.dll
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\bin\Debug\net5.0\Cvjecara.pdb
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.csproj.AssemblyReference.cache
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.AssemblyInfoInputs.cache
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.AssemblyInfo.cs
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.csproj.CoreCompileInputs.cache
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.sourcelink.json
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.dll
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\refint\Cvjecara.dll
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.pdb
+C:\Users\maida\Source\Repos\HBosno\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\ref\Cvjecara.dll

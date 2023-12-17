@@ -31,5 +31,26 @@ namespace TestProject1
             Assert.AreEqual(novaCijena, buket.Cijena);
         }
 
+
+        [TestMethod]
+        public void PretražiBukete_PoVrsti_VratiRuze()
+        {
+            Cvjećara cvjecara = new Cvjećara();
+            List<Cvijet> cvijece1 = new List<Cvijet>
+            {
+            new Cvijet(Vrsta.Ruža, "Rosa rubiginosa", "Crvena", DateTime.Now, 5),
+            new Cvijet(Vrsta.Orhideja, "Orchidaceae", "Roza", DateTime.Now, 5),
+            };
+            cvjecara.DodajBuket(cvijece1, new List<String>(), null, 50);
+            List<Cvijet> cvijece2 = new List<Cvijet>
+            {
+            new Cvijet(Vrsta.Ljiljan, "Lilium bosniacum", "Bijela", DateTime.Now, 5)
+            };
+            cvjecara.DodajBuket(cvijece2, new List<String>(), null, 50);
+            var trazeni = cvjecara.PretražiBukete(Vrsta.Ruža);
+            CollectionAssert.AreEqual(trazeni, new[] { cvjecara.DajSveBukete()[0] });
+        }
+
+
     }
 }
