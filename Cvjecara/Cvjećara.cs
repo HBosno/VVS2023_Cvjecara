@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,7 +64,7 @@ namespace Cvjecara
             else if (opcija == 2)
             {
                 RadSaCvijećemValidacija(c, opcija);
-                cvijeće.Remove(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme));  
+                cvijeće.Remove(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme));
             }
             else
                 throw new InvalidOperationException("Unijeli ste nepoznatu opciju!");
@@ -86,7 +85,7 @@ namespace Cvjecara
             {
                 throw new InvalidOperationException("Nemoguće dodati cvijet koji već postoji!");
             }
-            if(cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme) == null && (opcija == 1 || opcija == 2))
+            if (cvijeće.Find(cvijet => cvijet.LatinskoIme == c.LatinskoIme) == null && (opcija == 1 || opcija == 2))
             {
                 switch (opcija)
                 {
@@ -128,10 +127,6 @@ namespace Cvjecara
                 throw new ArgumentException("Nabavka nije dozvoljena ljeti ili zimi.");
             if (veličinaNarudžbe.Equals("Srednja"))
                 throw new ArgumentException("Nije dozvoljena nabavka srednje velicine.");
-            /* Simulacija CodeStream komentara:
-             * U naredna dva if-a se podrazumijeva godišnje doba "Proljeće" ili "Jesen", a nigdje nije urađena validacija.
-             * Također potrebna validacija za nesmislen parametar velicinaNarudzbe.
-             */
             if (!(godišnjeDoba.Equals("Proljeće") || godišnjeDoba.Equals("Jesen")))
                 throw new ArgumentException("Nabavka je dozvoljena samo u proljeće ili jesen.");
             if (!(veličinaNarudžbe.Equals("Mala") || veličinaNarudžbe.Equals("Velika")))
@@ -147,9 +142,6 @@ namespace Cvjecara
             }
             if (veličinaNarudžbe.Equals("Velika"))
             {
-                Cvijet ljiljan = new Cvijet(Vrsta.Ljiljan, "Lilium bosniacum", "Bijela", DateTime.Now.AddDays(-1), 10);
-                RadSaCvijećem(ljiljan, 2);
-                ObrišiBuket(buketi[buketi.Count()-1]);
                 Cvijet orhideja = new Cvijet(Vrsta.Orhideja, "Orchidaceae", "Roza", DateTime.Now.AddDays(-1), 100);
                 RadSaCvijećem(orhideja, 0);
                 Cvijet ruza = new Cvijet(Vrsta.Ruža, "Rosa rubiginosa", "Narandžasta", DateTime.Now.AddDays(-1), 100);
@@ -200,6 +192,18 @@ namespace Cvjecara
             cvijeće.RemoveAll(cvijet => zaObrisati.Contains(cvijet));
         }
 
+        // Dodana metoda u kojoj koristimo nedovršeni interface. Potrebna za mock test.
+        public void ProvjeriEkonomičnostBuketa(IEkonomičnost ekonomicnost)
+        {
+            List<Buket> zaObrisati = new List<Buket>();
+            foreach (Buket b in DajSveBukete())
+            {
+                if (!ekonomicnost.ProvjeriIsplativost(b))
+                    zaObrisati.Add(b);
+            }
+            DajSveBukete().RemoveAll(buket => zaObrisati.Contains(buket));
+        }
+
         public List<Poklon> DajSveNaručenePoklone(Mušterija m, double popust)
         {
             List<Poklon> pokloni = m.KupljeniPokloni.FindAll(poklon => poklon.PostotakPopusta == popust);
@@ -226,7 +230,7 @@ namespace Cvjecara
             //Ovu metodu je implementirao Dzenan Nuhic
             if (mušterije.Count == 0)
             {
-                throw new ArgumentException("Cvjecara nema nijednu musteriju"); 
+                throw new ArgumentException("Cvjecara nema nijednu musteriju");
             }
             List<int> brojCvijecaPoMusteriji = mušterije.Select(musterija =>
             {
@@ -237,9 +241,9 @@ namespace Cvjecara
             int maxBrojCvijeca = brojCvijecaPoMusteriji.Max();
             List<Mušterija> najboljeMusterije = mušterije
                 .Where((musterija, index) => brojCvijecaPoMusteriji[index] == maxBrojCvijeca).ToList();
-            
+
             //ako ima vise najboljih gleda se broj para koji su najbolji potrosili
-            if(najboljeMusterije.Count > 1)
+            if (najboljeMusterije.Count > 1)
             {
                 List<double> brojNovcaList = najboljeMusterije.Select(m =>
                 {
