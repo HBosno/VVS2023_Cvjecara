@@ -30,8 +30,10 @@ namespace UnitTestovi
 
         public static IEnumerable<object[]> UcitajPodatkeCSV()
         {
-            var path = @"C:\Users\Korisnik\Desktop\VVS\Cvjecara\TestProject1\Poklon.csv";
-            using (var reader = new StreamReader(path))
+            var path = "..\\..\\..\\Poklon.csv";
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), path);
+
+            using (var reader = new StreamReader(fullPath))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 var rows = csv.GetRecords<dynamic>();
@@ -46,7 +48,8 @@ namespace UnitTestovi
 
         public static IEnumerable<object[]> UcitajPodatkeXML()
         {
-            var path = @"C:\Users\Korisnik\Desktop\VVS\Cvjecara\TestProject1\Poklon.xml";
+            var path = "..\\..\\..\\Poklon.xml";
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), path);
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(path);
 
