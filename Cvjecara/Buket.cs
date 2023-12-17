@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 //Izbrisane nepotrebne biblioteke
 
 namespace Cvjecara
@@ -38,7 +39,17 @@ namespace Cvjecara
             }
         }
         //Promjenjen naziv atributa "a" u "cijena"
-        public double Cijena { get => cijena; } 
+        public double Cijena
+        {
+            get => cijena;
+            set
+            {
+                if (value < 0.01)
+                    throw new NotSupportedException("Cijena ne može biti manja od 0.01  KM!");
+                cijena = value;
+            }
+        }
+
         public Poklon Poklon { get => poklon; }
 
         #endregion
@@ -76,7 +87,19 @@ namespace Cvjecara
                 poklon = p;
         }
         //Izbrisana nepostojeća i nepotrebna metoda
-      
+
+        public void PopustZaVelikiBuket()
+        {
+            int ukupnoCvijeca = Cvijeće.Sum(cvijet => cvijet.Kolicina);
+            if (ukupnoCvijeca == 11)
+            {
+                double postotakPopusta = 10;
+                double faktor = 1 - (postotakPopusta / 100);
+                Cijena = Cijena * faktor;
+            }
+        }
+
+
         #endregion
     }
 }
