@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Poklon>
+		<Opis>Slusalice</Opis>
+		<Postotak>0.1</Postotak>
+	</Poklon>
+	<Poklon>
+		<Opis>Mobitel</Opis>
+		<Postotak>0.2</Postotak>
+	</Poklon>
+</Root>
