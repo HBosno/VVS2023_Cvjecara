@@ -263,14 +263,27 @@ namespace Cvjecara
             return najboljeMusterije[0];
         }
 
-        public List<Buket> PretražiBukete(Vrsta vrsta)
+        public List<Buket> PretražiBukete(Vrsta? vrsta = null, string? boja = null)
         {
-            var trazeni = DajSveBukete()
-            .Where(buket =>
-                (buket.Cvijeće.Any(cvijet => cvijet.Vrsta == vrsta))).ToList();
-            return trazeni;
-
+            if (vrsta != null & boja == null)
+            {
+                var trazeni = DajSveBukete()
+                             .Where(buket =>
+                                 (buket.Cvijeće.Any(cvijet => cvijet.Vrsta == vrsta))).ToList();
+                return trazeni;
+            }
+            else if (vrsta == null & boja != null)
+            {
+                var trazeni = DajSveBukete()
+                      .Where(buket =>
+                          (buket.Cvijeće.Any(cvijet => cvijet.Boja == boja))).ToList();
+                return trazeni;
+            }
+            return new List<Buket>();
         }
+
+        
+       
 
 
         #endregion
