@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\TestProject1\\TestProject1.csproj": {}
+    "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\Cvjecara\\Cvjecara.csproj": {
+    "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\Cvjecara\\Cvjecara.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\Cvjecara\\Cvjecara.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\Cvjecara\\Cvjecara.csproj",
         "projectName": "Cvjecara",
-        "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\Cvjecara\\Cvjecara.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\Cvjecara\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\Cvjecara\\Cvjecara.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\Cvjecara\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\TestProject1\\TestProject1.csproj": {
+    "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\TestProject1\\TestProject1.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\TestProject1\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\TestProject1\\TestProject1.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,8 +93,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\Cvjecara\\Cvjecara.csproj": {
-                "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara2\\Cvjecara\\Cvjecara.csproj"
+              "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\Cvjecara\\Cvjecara.csproj": {
+                "projectPath": "C:\\Users\\Korisnik\\Desktop\\VVS\\VVS-TDD\\Cvjecara\\Cvjecara.csproj"
               }
             }
           }
