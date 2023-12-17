@@ -10,3 +10,15 @@ C:\Users\hamza\Source\Repos\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.
 C:\Users\hamza\Source\Repos\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\refint\Cvjecara.dll
 C:\Users\hamza\Source\Repos\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\Cvjecara.pdb
 C:\Users\hamza\Source\Repos\VVS2023_Cvjecara\Cvjecara\obj\Debug\net5.0\ref\Cvjecara.dll
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\bin\Debug\net5.0\Cvjecara.deps.json
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\bin\Debug\net5.0\Cvjecara.dll
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\bin\Debug\net5.0\Cvjecara.pdb
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.csproj.AssemblyReference.cache
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.AssemblyInfoInputs.cache
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.AssemblyInfo.cs
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.csproj.CoreCompileInputs.cache
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.dll
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\refint\Cvjecara.dll
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\Cvjecara.pdb
+C:\Users\user\Dropbox\PC\Desktop\Cvjecara1\Cvjecara\obj\Debug\net5.0\ref\Cvjecara.dll
