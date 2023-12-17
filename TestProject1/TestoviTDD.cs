@@ -21,5 +21,15 @@ namespace TestProject1
             Assert.AreEqual(novaCijena, buket.Cijena);
         }
 
+        [TestMethod]
+        public void PopustZaVelikiBuket_30Cvjetova_PrimijenjenPopust()
+        {
+            Buket buket = new Buket(135);
+            buket.DodajCvijet(new Cvijet(Vrsta.Ruža, "Rosa Rubingosa", "Crvena", DateTime.Now, 30));
+            buket.PopustZaVelikiBuket();
+            double novaCijena = 121.5;
+            Assert.AreEqual(novaCijena, buket.Cijena);
+        }
+
     }
 }

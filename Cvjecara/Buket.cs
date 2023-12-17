@@ -73,6 +73,7 @@ namespace Cvjecara
         public void DodajCvijet(Cvijet c)
         {
             cvijeće.Add(c);
+            PopustZaVelikiBuket();
         }
 
         public void DodajDodatak(string d)
@@ -91,15 +92,13 @@ namespace Cvjecara
         public void PopustZaVelikiBuket()
         {
             int ukupnoCvijeca = Cvijeće.Sum(cvijet => cvijet.Kolicina);
-            if (ukupnoCvijeca == 11)
+            if (ukupnoCvijeca > 10)
             {
                 double postotakPopusta = 10;
                 double faktor = 1 - (postotakPopusta / 100);
                 Cijena = Cijena * faktor;
             }
         }
-
-
         #endregion
     }
 }
