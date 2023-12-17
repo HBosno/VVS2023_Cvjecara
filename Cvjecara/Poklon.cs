@@ -34,5 +34,14 @@ namespace Cvjecara
         }
 
         #endregion
+
+        #region MetodazaMockTest
+
+        public double OdrediCijenuPoklona(ICijenaPoklona cijena)          // Dodana metoda koja koristi ICijenaPoklona interfejs. Potrebna za mock test.
+        {
+            return cijena.OdrediCijenuPoklona(this);
+        }
+
+        #endregion
     }
 }

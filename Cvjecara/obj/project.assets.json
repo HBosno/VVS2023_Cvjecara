@@ -5313,19 +5313,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara1\\Cvjecara\\Cvjecara.csproj",
+      "projectUniqueName": "C:\\Users\\Korisnik\\source\\repos\\VVS2023_Cvjecara\\VVS-Projekat\\Cvjecara\\Cvjecara.csproj",
       "projectName": "Cvjecara",
-      "projectPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara1\\Cvjecara\\Cvjecara.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Dropbox\\PC\\Desktop\\Cvjecara1\\Cvjecara\\obj\\",
+      "projectPath": "C:\\Users\\Korisnik\\source\\repos\\VVS2023_Cvjecara\\VVS-Projekat\\Cvjecara\\Cvjecara.csproj",
+      "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Korisnik\\source\\repos\\VVS2023_Cvjecara\\VVS-Projekat\\Cvjecara\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
