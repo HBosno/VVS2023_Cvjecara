@@ -73,7 +73,6 @@ namespace Cvjecara
         public void DodajCvijet(Cvijet c)
         {
             cvijeće.Add(c);
-            PopustZaVelikiBuket();
         }
 
         public void DodajDodatak(string d)
